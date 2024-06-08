@@ -1,0 +1,16 @@
+W pliku z programem obliczyłem wartości ceny opcji europejskiej put oraz jej współczynniki delta, gamma i theta wynikające z modelu dwumianowego
+dla N={50,100,150,...,3000}.
+Następnie obliczyłem cenę tej opcji oraz jej współczynniki greckie ze wzorów z modelu Blacka-Scholesa dla tych samych parametrów co model dwumianowy
+i obliczyłem błędy bezwględne oraz względne aproksymacji ceny opcji oraz współczynników greckich.
+Otrzymałem następujące wyniki:
+-cena opcji - optymalnym parametrem N jest N = 400
+-delta - optymalnym parametrem N jest N = 350
+-gamma - optymalnym parametrem N jest N = 500
+-theta - optymalnym parametrem N jest N = 500
+Podane wartości optymalnych parametrów N podałem na podstawie analizy wykresów błędów względnych i bezwzględnych poprzez zauważenie, że
+dalsze zwiększanie parametru N powyżej podanych optymalnych wartości nie zmniejsza wartości błędów w znaczący sposób, natomiast znacząco zwiększa czas obliczeń.
+
+Wartością N_0 taką, aby cena opcji została policzona z błędem względnym co najwyżej 0.001 dla każdego N większego bądź równego N_0 jest N_0 = 350.
+Ta wartość N_0 jest odpowiednia również do obliczania współczynnika delta z błędem względnym co najwyżej 0.001 dla każdego N większego bądź równego N_0.
+Jednak dla współczynników gamma i theta N_0 = 350 jest za małe, aby obliczyć te współczynniki z odpowiednią dokładnością.
+Dla gamma należy wziąć N_0 = 600, a dla theta N_0 = 1050, aby osiągnąć dokładność podaną w treści zadania.
